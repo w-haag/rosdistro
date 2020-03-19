@@ -2451,6 +2451,10 @@ libimage-exiftool-perl:
   debian: [libimage-exiftool-perl]
   gentoo: [media-libs/exiftool]
   ubuntu: [libimage-exiftool-perl]
+libirimager:
+  ubuntu:
+    source:
+      uri: 'file:///home/whaag/Documents/optris/libirimager.rdmanifest'
 libirrlicht-dev:
   arch: [irrlicht]
   debian: [libirrlicht-dev]
