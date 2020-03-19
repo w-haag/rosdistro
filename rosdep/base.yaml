@@ -2453,10 +2453,10 @@ libimage-exiftool-perl:
   ubuntu: [libimage-exiftool-perl]
 libirimager:
   ubuntu:
-    xenial:
+    bionic:
       source:
         uri: 'https://raw.githubusercontent.com/w-haag/rosdistro/master/libirimager.rdmanifest'
-    bionic:
+    xenial:
       source:
         uri: 'https://raw.githubusercontent.com/w-haag/rosdistro/master/libirimager.rdmanifest'
 libirrlicht-dev:
