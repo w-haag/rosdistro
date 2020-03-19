@@ -2455,10 +2455,10 @@ libirimager:
   ubuntu:
     xenial:
       source:
-        uri: 'file:///home/whaag/Documents/optris/libirimager.rdmanifest'
+        uri: 'https://raw.githubusercontent.com/w-haag/rosdistro/master/libirimager.rdmanifest'
     bionic:
       source:
-        uri: 'file:///home/whaag/Documents/optris/libirimager.rdmanifest'
+        uri: 'https://raw.githubusercontent.com/w-haag/rosdistro/master/libirimager.rdmanifest'
 libirrlicht-dev:
   arch: [irrlicht]
   debian: [libirrlicht-dev]

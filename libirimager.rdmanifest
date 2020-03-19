@@ -1,0 +1,23 @@
+uri: 'https://raw.githubusercontent.com/magazino/pylon_camera/indigo-devel/rosdep/empty.tar'
+md5sum: df41600634ca08cb5082877eb64220c9
+install-script: |
+  arch="$(uname -m)"
+  if [ "$arch" == "atom" ]; then
+    pkgarch="atom"
+  elif [ "$arch" == "armhf" ]; then
+    pkgarch="armhf"
+  elif [ "$arch" == "armel" ]; then
+    pkgarch="armel"
+  elif [ "$arch" == "arm64" ]; then
+    pkgarch="arm64"
+  elif [ "$arch" == "x86_64" ]; then
+    pkgarch="amd64"
+  else
+    pkgarch="i386"
+  fi
+
+  pkg=libirimager-8.1.0-${pkgarch}.deb
+  url="http://ftp.evocortex.com/${pkg}"
+
+  wget --no-check-certificate -O $pkg $url
+  sudo dpkg -i $pkg
