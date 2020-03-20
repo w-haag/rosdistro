@@ -20,12 +20,13 @@ install-script: |
   pkg="libirimager-latest_$pkgarch.deb"
   wget --no-check-certificate -O $pkg $url
   sudo dpkg -i $pkg
+
 check-presence-script: |
   #!/bin/bash
-  if test "x`dpkg-query -W -f='${Package} ${Status} ${Version}\n' libirimager`" != 'libirimager install ok installed 8.1.0'; then
-    echo "libirimager not installed"
-    exit 1
-  else
+  dpkg-query -W -f='${Package} ${Status}\n' libirimager | awk '{\
+  if ($4 =="installed")
     exit 0
-  fi
-depends: [wget]
+  else
+    print "libirimager not installed"
+    exit 1}'
+depends: [wget, libudev-dev, libusb-1.0-dev]
