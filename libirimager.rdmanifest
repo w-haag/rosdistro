@@ -16,12 +16,24 @@ install-script: |
   else
     pkgarch="i386"
   fi
+ 
+  echo "got arch:"
+  echo $arch
 
   pkg=libirimager-8.1.0-${pkgarch}.deb
   url="http://ftp.evocortex.com/${pkg}"
 
+  echo "got url:"
+  echo $url
+
   sudo apt-get install -y wget 
   sudo apt-get install -y libudev-dev
   sudo apt-get install -y libusb-1.0-0-dev
+
+  echo "installed dependencies"
+
   wget --no-check-certificate -O $pkg $url
+
+  echo "got archive"
+
   sudo dpkg -i $pkg
