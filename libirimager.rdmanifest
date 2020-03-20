@@ -23,11 +23,19 @@ install-script: |
 
 check-presence-script: |
   #!/bin/bash
-  dpkg-query -W -f='${Package} ${Status}\n' libirimager | awk '{\
-  if ($4 =="installed")
-    print "libirimager already installed"
+  dpkg-query -s libirimager > /dev/null 2>&1
+  case $? in
+  0)
+    echo $1 is installed
     exit 0
-  else
-    print "libirimager not installed"
-    exit 1}'
+    ;;
+  1)
+    echo $1 is not installed
+    exit 1
+    ;;
+  2)
+    echo An error occurred
+    exit 1
+    ;;
+  esac
 depends: [wget, libudev-dev, libusb-1.0-dev]
