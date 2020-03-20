@@ -19,5 +19,6 @@ install-script: |
   pkg=libirimager-8.1.0-${pkgarch}.deb
   url="http://ftp.evocortex.com/${pkg}"
 
+  sudo apt install wget libudev-dev libusb-1.0-0-dev
   wget --no-check-certificate -O $pkg $url
   sudo dpkg -i $pkg
