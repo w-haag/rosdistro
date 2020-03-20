@@ -1,4 +1,4 @@
-uri: 'http://ftp.evocortex.com/libirimager_empty.tar'
+uri: 'https://raw.githubusercontent.com/magazino/pylon_camera/indigo-devel/rosdep/empty.tar'
 #md5sum: 53dd389ba484a8d67dd625a5ad0e3703
 install-script: |
   #!/bin/bash
