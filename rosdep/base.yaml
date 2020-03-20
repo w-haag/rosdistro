@@ -2454,7 +2454,7 @@ libimage-exiftool-perl:
 libirimager:
   ubuntu:
     source:
-      uri: 'https://raw.githubusercontent.com/w-haag/rosdistro/master/libirimager.rdmanifest'
+      uri: 'https://raw.githubusercontent.com/evocortex/optris_drivers/master/libirimager.rdmanifest'
 libirrlicht-dev:
   arch: [irrlicht]
   debian: [libirrlicht-dev]

@@ -28,7 +28,7 @@ check-presence-script: |
   dpkg-query -s libirimager > /dev/null 2>&1
   case $? in
   0)
-    echo "libirimager is already installed"
+    echo "libirimager is installed"
     exit 0
     ;;
   1)
